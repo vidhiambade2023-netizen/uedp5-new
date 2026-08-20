@@ -1,0 +1,16 @@
+/* Styles for Figma Component: "Container 5" */
+.uedp-container5 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.uedp-container5 {
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  background: var(--uedp-slate-900, #0f172a);
+  border: 1px solid var(--uedp-slate-800, #1e293b);
+  border-radius: var(--uedp-rounded-2xl, 16px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}

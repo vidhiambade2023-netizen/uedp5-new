@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": true,
+  "buildCommand": "npm run build-storybook",
+  "outputDirectory": "storybook-static",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

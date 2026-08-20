@@ -1,0 +1,27 @@
+/* Styles for Figma Component: "Map" */
+.uedp-map {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.uedp-map {
+  width: 100%;
+  max-width: 440px;
+  height: 220px;
+  border-radius: var(--uedp-rounded-2xl, 16px);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid var(--uedp-slate-700, #334155);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uedp-map__grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#334155 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: 0.4;
+}

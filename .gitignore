@@ -1,0 +1,5 @@
+node_modules/
+.node/
+storybook-static/
+.DS_Store
+*.log

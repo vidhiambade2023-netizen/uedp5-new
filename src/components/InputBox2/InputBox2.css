@@ -1,0 +1,40 @@
+/* Styles for Figma Component: "Input Box 2" */
+.uedp-inputbox2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.uedp-inputbox2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--uedp-gap-2, 6px);
+  width: 100%;
+  max-width: 360px;
+}
+.uedp-inputbox2__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--uedp-slate-200, #e2e8f0);
+}
+.uedp-inputbox2__input {
+  width: 100%;
+  padding: var(--uedp-padding-4, 10px) 14px;
+  background-color: var(--uedp-slate-900, #0f172a);
+  border: 1px solid var(--uedp-slate-700, #334155);
+  border-radius: var(--uedp-rounded-lg, 8px);
+  color: var(--uedp-slate-50, #f8fafc);
+  font-size: 14px;
+  outline: none;
+}
+.uedp-inputbox2__input:focus {
+  border-color: var(--uedp-blue-500, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+.uedp-inputbox2--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.uedp-inputbox2--error .uedp-inputbox2__input {
+  border-color: #ef4444 !important;
+}
