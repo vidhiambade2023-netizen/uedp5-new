@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "npm run build-storybook",
   "outputDirectory": "storybook-static",
   "cleanUrls": true,
