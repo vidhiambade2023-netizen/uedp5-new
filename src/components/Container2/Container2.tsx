@@ -3,6 +3,9 @@ import './Container2.css';
 
 export interface Container2Props {
   title?: string;
+  /** Boolean property: true shows the 'cheapest' tag, false hides it */
+  isCheapest?: boolean;
+  showBadge?: boolean;
   badgeText?: string;
   priceText?: string;
   state?: 'default' | 'disabled' | 'shadow' | 'cream';
@@ -11,11 +14,16 @@ export interface Container2Props {
 
 export const Container2: React.FC<Container2Props> = ({
   title = 'enter text',
+  isCheapest = true,
+  showBadge,
   badgeText = 'cheapest',
   priceText = '₹00',
   state = 'default',
   onClick
 }) => {
+  // If showBadge is explicitly provided, respect it; otherwise use isCheapest boolean
+  const displayBadge = showBadge !== undefined ? showBadge : isCheapest;
+
   return (
     <div
       className={`uedp-container2 uedp-container2--${state}`}
@@ -34,7 +42,7 @@ export const Container2: React.FC<Container2Props> = ({
       </div>
 
       <div className="uedp-container2__right">
-        {badgeText && <span className="uedp-container2__badge">{badgeText}</span>}
+        {displayBadge && <span className="uedp-container2__badge">{badgeText}</span>}
         <span className="uedp-container2__price">{priceText}</span>
       </div>
     </div>
