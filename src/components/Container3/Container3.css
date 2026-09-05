@@ -1,16 +1,188 @@
-/* Styles for Figma Component: "Container 3" */
-.uedp-container3 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "container-3" (node-id=29-1316) */
 
 .uedp-container3 {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 195px;
+  height: 275px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: visible;
+}
+
+.uedp-container3__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   width: 100%;
-  max-width: 360px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  height: 130px;
+}
+
+.uedp-container3__packet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uedp-container3__addbadge {
+  position: absolute;
+  right: -6px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  background-color: #fffde7;
+  border: 1.5px solid #facc15;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.uedp-container3__addtitle {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ca8a04;
+  line-height: 1.1;
+}
+
+.uedp-container3__addsub {
+  font-size: 9px;
+  font-weight: 600;
+  color: #ca8a04;
+  line-height: 1.1;
+}
+
+.uedp-container3__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.uedp-container3__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+
+.uedp-container3__weight {
+  font-size: 12px;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+.uedp-container3__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.uedp-container3__brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.uedp-container3__swiggylogo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fc8019;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.uedp-container3__price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.uedp-container3__discount {
+  font-size: 12px;
+  font-weight: 600;
+  color: #65d01e;
+  margin-right: 28px;
+}
+
+.uedp-container3__actionbtn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #14532d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* State 1: Default (White background, slate outline) */
+.uedp-container3--default {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+}
+
+.uedp-container3--default:hover {
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* State 2: Disabled (Pale grey slate fill, muted button) */
+.uedp-container3--disabled {
+  background-color: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  cursor: not-allowed;
+}
+
+.uedp-container3--disabled .uedp-container3__actionbtn {
+  background-color: #94a3b8;
+  box-shadow: none !important;
+}
+
+.uedp-container3--disabled .uedp-container3__title,
+.uedp-container3--disabled .uedp-container3__weight {
+  color: #94a3b8;
+}
+
+/* State 3: Shadow / Elevated */
+.uedp-container3--shadow {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+.uedp-container3--shadow .uedp-container3__actionbtn {
+  box-shadow: 0 6px 14px rgba(20, 83, 45, 0.4);
+}
+
+/* State 4: Cream Yellow Tint */
+.uedp-container3--cream {
+  background-color: #f7fce8;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.uedp-container3--cream .uedp-container3__actionbtn {
+  box-shadow: 0 6px 14px rgba(20, 83, 45, 0.4);
 }
