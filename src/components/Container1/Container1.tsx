@@ -3,19 +3,51 @@ import './Container1.css';
 
 export interface Container1Props {
   title?: string;
-  text?: string;
+  itemsCount?: number;
+  addedTodayCount?: number;
+  state?: 'default' | 'disabled' | 'shadow' | 'cream';
+  onClick?: () => void;
 }
 
 export const Container1: React.FC<Container1Props> = ({
-  title = 'Container 1',
-  text = 'High fidelity UI component synchronized with Figma design system tokens.'
-}) => (
-  <div className="uedp-container1" data-figma-layer="Container 1">
-    <div style={{ width: 36, height: 36, borderRadius: 10, background: '#38bdf8', marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0f172a' }}>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
+  title = 'enter your text',
+  itemsCount = 0,
+  addedTodayCount = 0,
+  state = 'default',
+  onClick
+}) => {
+  return (
+    <div
+      className={`uedp-container1 uedp-container1--${state}`}
+      onClick={state !== 'disabled' ? onClick : undefined}
+      data-figma-layer="container-1"
+      data-figma-node-id="29:1103"
+    >
+      <div className="uedp-container1__content">
+        <h4 className="uedp-container1__title">{title}</h4>
+        <div className="uedp-container1__meta">
+          <span>{itemsCount} items</span>
+          <span className="uedp-container1__dot">•</span>
+          <span>{addedTodayCount} added today</span>
+        </div>
+      </div>
+      <div className="uedp-container1__button">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M5 12h14" />
+          <path d="M13 5l7 7-7 7" />
+        </svg>
+      </div>
     </div>
-    <h4 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#f8fafc' }}>{title}</h4>
-    <p style={{ margin: '8px 0 16px', fontSize: 13, color: '#94a3b8', lineHeight: 1.5 }}>{text}</p>
-  </div>
-);
+  );
+};
+
 export default Container1;

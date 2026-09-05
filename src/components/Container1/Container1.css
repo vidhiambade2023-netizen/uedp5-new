@@ -1,16 +1,103 @@
-/* Styles for Figma Component: "Container 1" */
-.uedp-container1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "container-1" (node-id=29-1103) */
 
 .uedp-container1 {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  max-width: 360px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.uedp-container1__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uedp-container1__title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #1e293b;
+}
+
+.uedp-container1__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #475569;
+}
+
+.uedp-container1__dot {
+  color: #15803d;
+  font-size: 16px;
+}
+
+.uedp-container1__button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #14532d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* State 1: Default (White background, slate border) */
+.uedp-container1--default {
+  background-color: #ffffff;
+  border: 1.5px solid #94a3b8;
+}
+
+.uedp-container1--default:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* State 2: Disabled (Grey filled background, muted text) */
+.uedp-container1--disabled {
+  background-color: #e2e8f0;
+  border: 1.5px solid #cbd5e1;
+  cursor: not-allowed;
+}
+
+.uedp-container1--disabled .uedp-container1__title,
+.uedp-container1--disabled .uedp-container1__meta {
+  color: #94a3b8;
+}
+
+.uedp-container1--disabled .uedp-container1__dot {
+  color: #94a3b8;
+}
+
+.uedp-container1--disabled .uedp-container1__button {
+  background-color: #cbd5e1;
+  color: #ffffff;
+}
+
+/* State 3: Shadow / Elevated */
+.uedp-container1--shadow {
+  background-color: #ffffff;
+  border: 1.5px solid #94a3b8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* State 4: Cream Yellow Tint */
+.uedp-container1--cream {
+  background-color: #fffde7;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
