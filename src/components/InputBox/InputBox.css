@@ -1,40 +1,105 @@
-/* Styles for Figma Component: "Input Box" */
-.uedp-inputbox {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "Input Box" (node-id=23-719) */
 
-.uedp-inputbox {
+.uedp-inputbox-container {
   display: flex;
   flex-direction: column;
   gap: var(--uedp-gap-2, 6px);
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
 }
+
 .uedp-inputbox__label {
   font-size: 13px;
   font-weight: 600;
-  color: var(--uedp-slate-200, #e2e8f0);
+  color: var(--uedp-slate-300, #cbd5e1);
+  margin-left: 16px;
 }
+
+.uedp-inputbox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 24px;
+  height: 54px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1.5px solid #8e9aab;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  color: #3f4e61;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.uedp-inputbox__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  flex-shrink: 0;
+}
+
 .uedp-inputbox__input {
   width: 100%;
-  padding: var(--uedp-padding-4, 10px) 14px;
-  background-color: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-700, #334155);
-  border-radius: var(--uedp-rounded-lg, 8px);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-size: 14px;
+  border: none;
+  background: transparent;
   outline: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: inherit;
 }
-.uedp-inputbox__input:focus {
-  border-color: var(--uedp-blue-500, #3b82f6);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+
+.uedp-inputbox__input::placeholder {
+  color: inherit;
+  opacity: 0.85;
 }
+
+/* State: Focus / Hover */
+.uedp-inputbox:hover,
+.uedp-inputbox--focus {
+  border-color: #4f5d73;
+}
+
+.uedp-inputbox:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* State: Disabled */
 .uedp-inputbox--disabled {
-  opacity: 0.5;
+  background-color: #e2e6ea;
+  border-color: #bdc5d1;
+  color: #64748b;
   cursor: not-allowed;
 }
+
+.uedp-inputbox--disabled .uedp-inputbox__input {
+  cursor: not-allowed;
+}
+
+/* State: Shadow / Elevated */
+.uedp-inputbox--shadow {
+  background-color: #ffffff;
+  border-color: #94a3b8;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* State: Error */
+.uedp-inputbox--error {
+  background-color: #ffffff;
+  border-color: #f87171 !important;
+  color: #f87171 !important;
+}
+
 .uedp-inputbox--error .uedp-inputbox__input {
-  border-color: #ef4444 !important;
+  color: #f87171 !important;
+}
+
+.uedp-inputbox--error .uedp-inputbox__input::placeholder {
+  color: #f87171 !important;
+  opacity: 1;
 }
