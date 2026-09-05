@@ -1,16 +1,118 @@
-/* Styles for Figma Component: "Container 5" */
-.uedp-container5 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "container-5" (node-id=33-2072) */
 
 .uedp-container5 {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  max-width: 360px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  max-width: 440px;
+  height: 86px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
 }
+
+.uedp-container5__brand-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uedp-container5__details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.uedp-container5__app-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.uedp-container5__item-count {
+  font-size: 14px;
+  font-weight: 400;
+  color: #8e8e93;
+  margin-top: 4px;
+}
+
+.uedp-container5__buy-btn {
+  width: 96px;
+  height: 40px;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  background-color: #14532d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.uedp-container5__buy-btn:hover:not(:disabled) {
+  background-color: #0f3d21;
+  transform: scale(1.03);
+}
+
+/* Variant 1: Default (White Background, Slate Border) */
+.uedp-container5--default {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+}
+
+.uedp-container5--default:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Variant 2: Disabled (Greyed Slate Fill) */
+.uedp-container5--disabled {
+  background-color: #e2e8f0;
+  border: 1.5px solid #cbd5e1;
+}
+
+.uedp-container5--disabled .uedp-container5__app-name,
+.uedp-container5--disabled .uedp-container5__item-count {
+  color: #94a3b8;
+}
+
+.uedp-container5--disabled .uedp-container5__buy-btn {
+  background-color: #cbd5e1;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* Variant 3: Shadow / Elevated White Card */
+.uedp-container5--shadow {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Variant 4: Cream / Warm Soft Yellow Tint Card */
+.uedp-container5--cream {
+  background-color: #fefce8;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
