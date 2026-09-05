@@ -113,9 +113,11 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Variant 4: Tint / Soft Greyish Blue Card Fill */
+/* Variant 4: Tint / Soft Warm Cream Yellow Tint */
 .uedp-container4--tint {
-  background-color: #f8fafc;
-  border: 1px solid #f1f5f9;
+  background-color: #fefde8;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
+
 
