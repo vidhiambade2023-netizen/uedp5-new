@@ -1,4 +1,4 @@
-/* Auto-generated barrel export for Figma Design System */
+/* Figma Design System Component Exports - Container1, Container2, Container3 included */
 export { Component336 } from './components/Component336/Component336';
 export type { Component336Props } from './components/Component336/Component336';
 export { Filters } from './components/Filters/Filters';
