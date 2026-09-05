@@ -4,17 +4,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 195px;
-  height: 275px;
+  width: 200px;
+  height: 280px;
   padding: 16px;
   box-sizing: border-box;
-  border-radius: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  border-radius: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   user-select: none;
   position: relative;
   overflow: visible;
+  border: 1.5px solid #d1d5db;
+  background-color: #ffffff;
 }
 
 .uedp-container3__image-wrapper {
@@ -23,7 +25,8 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 135px;
+  margin-top: 2px;
 }
 
 .uedp-container3__packet {
@@ -34,70 +37,75 @@
 
 .uedp-container3__addbadge {
   position: absolute;
-  right: -6px;
-  bottom: 0;
+  right: 0px;
+  bottom: -6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4px 10px;
+  padding: 6px 14px;
   background-color: #fffde7;
   border: 1.5px solid #facc15;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 2;
 }
 
 .uedp-container3__addtitle {
-  font-size: 11px;
-  font-weight: 800;
-  color: #ca8a04;
+  font-size: 13px;
+  font-weight: 700;
+  color: #b45309;
   line-height: 1.1;
+  text-align: center;
 }
 
 .uedp-container3__addsub {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
-  color: #ca8a04;
+  color: #b45309;
   line-height: 1.1;
+  text-align: center;
+  margin-top: 1px;
 }
 
 .uedp-container3__details {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-top: 8px;
+  margin-top: 14px;
 }
 
 .uedp-container3__title {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: #0f172a;
+  color: #000000;
+  line-height: 1.2;
 }
 
 .uedp-container3__weight {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
-  color: #94a3b8;
+  color: #8e8e93;
+  margin-top: 4px;
 }
 
 .uedp-container3__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
-.uedp-container3__brand {
+.uedp-container3__brand-price {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .uedp-container3__swiggylogo {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: #fc8019;
   color: #ffffff;
@@ -108,81 +116,91 @@
 }
 
 .uedp-container3__price {
-  font-size: 16px;
-  font-weight: 800;
-  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
   letter-spacing: -0.02em;
 }
 
 .uedp-container3__discount {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #65d01e;
-  margin-right: 28px;
+  margin-right: 32px;
 }
 
 .uedp-container3__actionbtn {
   position: absolute;
   right: 8px;
   bottom: 8px;
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #14532d;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
   flex-shrink: 0;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
-/* State 1: Default (White background, slate outline) */
+.uedp-container3__actionbtn:hover {
+  transform: scale(1.04);
+  background-color: #0f3d21;
+}
+
+/* State 1: Default (White background, grey outline) */
 .uedp-container3--default {
   background-color: #ffffff;
-  border: 1.5px solid #cbd5e1;
+  border: 1.5px solid #d1d5db;
 }
 
 .uedp-container3--default:hover {
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* State 2: Disabled (Pale grey slate fill, muted button) */
+/* State 2: Disabled (Greyed out) */
 .uedp-container3--disabled {
-  background-color: #f1f5f9;
-  border: 1.5px solid #cbd5e1;
+  background-color: #f3f4f6;
+  border: 1.5px solid #e5e7eb;
   cursor: not-allowed;
 }
 
 .uedp-container3--disabled .uedp-container3__actionbtn {
-  background-color: #94a3b8;
+  background-color: #9ca3af;
   box-shadow: none !important;
 }
 
 .uedp-container3--disabled .uedp-container3__title,
 .uedp-container3--disabled .uedp-container3__weight {
-  color: #94a3b8;
+  color: #9ca3af;
 }
 
 /* State 3: Shadow / Elevated */
 .uedp-container3--shadow {
   background-color: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .uedp-container3--shadow .uedp-container3__actionbtn {
-  box-shadow: 0 6px 14px rgba(20, 83, 45, 0.4);
+  box-shadow: 0 6px 14px rgba(20, 83, 45, 0.35);
 }
 
-/* State 4: Cream Yellow Tint */
+/* State 4: Cream / Soft Yellow Tint */
 .uedp-container3--cream {
   background-color: #f7fce8;
-  border: 1.5px solid #cbd5e1;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #d9e8b5;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 .uedp-container3--cream .uedp-container3__actionbtn {
-  box-shadow: 0 6px 14px rgba(20, 83, 45, 0.4);
+  box-shadow: 0 6px 14px rgba(20, 83, 45, 0.35);
 }
+
