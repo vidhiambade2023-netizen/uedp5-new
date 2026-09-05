@@ -1,16 +1,96 @@
-/* Styles for Figma Component: "Cards" */
-.uedp-cards {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "cards" (node-id=52-243) */
 
 .uedp-cards {
-  padding: 20px;
-  width: 100%;
-  max-width: 360px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 185px;
+  height: 230px;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  border-radius: 28px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background-color: #ffffff;
+  border: 1.5px solid #d1d5db;
 }
+
+.uedp-cards:hover:not(.uedp-cards--disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.uedp-cards__brand-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.uedp-cards__name {
+  margin: 10px 0 0 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.uedp-cards__price {
+  font-size: 26px;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: -0.02em;
+  margin-top: 14px;
+  line-height: 1.1;
+}
+
+.uedp-cards__orders {
+  font-size: 13px;
+  font-weight: 400;
+  color: #8e8e93;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+/* Variant 1: Default (White Background, Soft Shadow) */
+.uedp-cards--default {
+  background-color: #ffffff;
+  border: 1.5px solid #d1d5db;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Variant 2: Disabled (Light Slate Grey Fill) */
+.uedp-cards--disabled {
+  background-color: #e2e8f0;
+  border: 1.5px solid #cbd5e1;
+  cursor: not-allowed;
+}
+
+.uedp-cards--disabled .uedp-cards__name,
+.uedp-cards--disabled .uedp-cards__price {
+  color: #64748b;
+}
+
+/* Variant 3: Yellow (Bright Warm Yellow Fill) */
+.uedp-cards--yellow {
+  background-color: #fde047;
+  border: 1.5px solid #facc15;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Variant 4: Mint (Soft Pastel Light Green Fill) */
+.uedp-cards--mint {
+  background-color: #f0fdf4;
+  border: 1.5px solid #86efac;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
