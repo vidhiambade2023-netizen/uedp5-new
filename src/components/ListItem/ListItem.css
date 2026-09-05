@@ -1,18 +1,164 @@
-/* Styles for Figma Component: "List Item" */
-.uedp-listitem {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "list item" (node-id=35-2549) */
 
 .uedp-listitem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
   width: 100%;
-  max-width: 380px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-xl, 12px);
+  max-width: 440px;
+  height: 80px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
 }
+
+.uedp-listitem:hover:not(.uedp-listitem--disabled) {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.uedp-listitem__radio {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #facc15;
+  flex-shrink: 0;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.uedp-listitem__radio--selected {
+  background-color: #facc15;
+}
+
+.uedp-listitem__radio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.uedp-listitem__name {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-right: 16px;
+}
+
+.uedp-listitem__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.uedp-listitem__compare-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #fef9c3;
+  color: #14532d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.uedp-listitem__compare-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  background-color: #fef08a;
+}
+
+.uedp-listitem__chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14532d;
+}
+
+/* Variant 1: Default (White Outlined Row) */
+.uedp-listitem--default {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+}
+
+.uedp-listitem--default .uedp-listitem__name {
+  color: #000000;
+}
+
+/* Variant 2: Placeholder (Muted Title) */
+.uedp-listitem--placeholder {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+}
+
+.uedp-listitem--placeholder .uedp-listitem__name {
+  color: #94a3b8;
+}
+
+/* Variant 3: Disabled (Light Slate Grey Fill) */
+.uedp-listitem--disabled {
+  background-color: #e2e8f0;
+  border: 1.5px solid #cbd5e1;
+  cursor: not-allowed;
+}
+
+.uedp-listitem--disabled .uedp-listitem__name {
+  color: #94a3b8;
+}
+
+.uedp-listitem--disabled .uedp-listitem__radio {
+  background-color: #cbd5e1;
+}
+
+.uedp-listitem--disabled .uedp-listitem__compare-btn {
+  background-color: #e5e7eb;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.uedp-listitem--disabled .uedp-listitem__chevron {
+  color: #94a3b8;
+}
+
+/* Variant 4: Shadow / Elevated White Row */
+.uedp-listitem--shadow {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.uedp-listitem--shadow .uedp-listitem__name {
+  color: #000000;
+}
+
+/* Variant 5: Cream / Warm Light Yellow Fill Bar */
+.uedp-listitem--cream {
+  background-color: #fefce8;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.uedp-listitem--cream .uedp-listitem__name {
+  color: #000000;
+}
+
