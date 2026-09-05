@@ -2,20 +2,47 @@ import React from 'react';
 import './QuickActionCards.css';
 
 export interface QuickActionCardsProps {
-  title?: string;
-  text?: string;
+  label?: string;
+  state?: 'default' | 'disabled' | 'hover' | 'active';
+  hasIcon?: boolean;
+  onClick?: () => void;
 }
 
 export const QuickActionCards: React.FC<QuickActionCardsProps> = ({
-  title = 'Quick Action Cards',
-  text = 'High fidelity UI component synchronized with Figma design system tokens.'
-}) => (
-  <div className="uedp-quickactioncards" data-figma-layer="Quick Action Cards">
-    <div style={{ width: 36, height: 36, borderRadius: 10, background: '#38bdf8', marginBottom: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0f172a' }}>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
+  label = 'enter text',
+  state = 'default',
+  hasIcon = true,
+  onClick
+}) => {
+  return (
+    <div
+      className={`uedp-quickactioncards uedp-quickactioncards--${state}`}
+      onClick={state !== 'disabled' ? onClick : undefined}
+      data-figma-layer="quick action cards"
+      data-figma-node-id="23:800"
+    >
+      {hasIcon && (
+        <span className="uedp-quickactioncards__icon">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M5 4h7a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+            <path d="M19 7v2" strokeDasharray="1.5 1.5" />
+            <path d="M19 11v2" strokeDasharray="1.5 1.5" />
+            <path d="M19 15v2" strokeDasharray="1.5 1.5" />
+          </svg>
+        </span>
+      )}
+      <span className="uedp-quickactioncards__label">{label}</span>
     </div>
-    <h4 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: '#f8fafc' }}>{title}</h4>
-    <p style={{ margin: '8px 0 16px', fontSize: 13, color: '#94a3b8', lineHeight: 1.5 }}>{text}</p>
-  </div>
-);
+  );
+};
+
 export default QuickActionCards;

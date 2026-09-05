@@ -1,16 +1,76 @@
-/* Styles for Figma Component: "Quick Action Cards" */
-.uedp-quickactioncards {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "quick action cards" (node-id=23-800) */
 
 .uedp-quickactioncards {
-  padding: 20px;
-  width: 100%;
-  max-width: 360px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 150px;
+  height: 150px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 28px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #144d29;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+}
+
+.uedp-quickactioncards__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #144d29;
+}
+
+.uedp-quickactioncards__label {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #144d29;
+}
+
+/* State 1: Default (Cream Yellow outline card) */
+.uedp-quickactioncards--default {
+  background-color: #fffde7;
+  border: 1.5px solid #facc15;
+}
+
+.uedp-quickactioncards--default:hover {
+  background-color: #fef08a;
+  border-color: #fde047;
+  box-shadow: 0 10px 22px rgba(250, 204, 21, 0.3);
+}
+
+.uedp-quickactioncards--default:active {
+  background-color: #fde047;
+  border-color: #eab308;
+  box-shadow: 0 12px 24px rgba(234, 179, 8, 0.4);
+}
+
+/* State 2: Disabled (Pale Grey slate card) */
+.uedp-quickactioncards--disabled {
+  background-color: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #144d29;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}
+
+/* State 3: Hover (Soft Yellow Filled) */
+.uedp-quickactioncards--hover {
+  background-color: #fef08a;
+  border: 1.5px solid #fde047;
+  box-shadow: 0 10px 22px rgba(250, 204, 21, 0.3);
+}
+
+/* State 4: Active (Vibrant Yellow Filled) */
+.uedp-quickactioncards--active {
+  background-color: #facc15;
+  border: 1.5px solid #eab308;
+  box-shadow: 0 12px 24px rgba(234, 179, 8, 0.4);
 }
