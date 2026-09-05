@@ -1,40 +1,141 @@
-/* Styles for Figma Component: "Input Box 2" */
-.uedp-inputbox2 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "input box-2" (node-id=33-2302) */
 
 .uedp-inputbox2 {
   display: flex;
-  flex-direction: column;
-  gap: var(--uedp-gap-2, 6px);
+  align-items: center;
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
+  gap: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  user-select: none;
 }
-.uedp-inputbox2__label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--uedp-slate-200, #e2e8f0);
+
+.uedp-inputbox2__pill {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 54px;
+  padding: 0 18px 0 24px;
+  box-sizing: border-box;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff;
+  border: 1.5px solid #475569;
 }
+
 .uedp-inputbox2__input {
-  width: 100%;
-  padding: var(--uedp-padding-4, 10px) 14px;
-  background-color: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-700, #334155);
-  border-radius: var(--uedp-rounded-lg, 8px);
-  color: var(--uedp-slate-50, #f8fafc);
-  font-size: 14px;
+  flex-grow: 1;
+  border: none;
   outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #334155;
+  font-family: inherit;
+  margin-right: 10px;
 }
-.uedp-inputbox2__input:focus {
-  border-color: var(--uedp-blue-500, #3b82f6);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+
+.uedp-inputbox2__input::placeholder {
+  color: #94a3b8;
+  opacity: 1;
 }
-.uedp-inputbox2--disabled {
-  opacity: 0.5;
+
+.uedp-inputbox2__copy-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #334155;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.uedp-inputbox2__copy-btn:hover:not(:disabled) {
+  color: #0f172a;
+}
+
+.uedp-inputbox2__submit-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #14532d;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.uedp-inputbox2__submit-btn:hover:not(:disabled) {
+  background-color: #0f3d21;
+  transform: scale(1.04);
+}
+
+/* Variant 1: Default (White Input Pill with Slate Outline) */
+.uedp-inputbox2--default .uedp-inputbox2__pill {
+  background-color: #ffffff;
+  border: 1.5px solid #475569;
+}
+
+.uedp-inputbox2--default .uedp-inputbox2__submit-btn {
+  background-color: #14532d;
+  color: #ffffff;
+}
+
+/* Variant 2: Disabled (Light Slate Fill) */
+.uedp-inputbox2--disabled .uedp-inputbox2__pill {
+  background-color: #f1f5f9;
+  border: 1.5px solid #94a3b8;
   cursor: not-allowed;
 }
-.uedp-inputbox2--error .uedp-inputbox2__input {
-  border-color: #ef4444 !important;
+
+.uedp-inputbox2--disabled .uedp-inputbox2__input {
+  color: #94a3b8;
+  cursor: not-allowed;
 }
+
+.uedp-inputbox2--disabled .uedp-inputbox2__copy-btn {
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.uedp-inputbox2--disabled .uedp-inputbox2__submit-btn {
+  background-color: #e2e8f0;
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Variant 3: Shadow / Elevated White Input */
+.uedp-inputbox2--shadow .uedp-inputbox2__pill {
+  background-color: #ffffff;
+  border: 1.5px solid #475569;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.uedp-inputbox2--shadow .uedp-inputbox2__submit-btn {
+  background-color: #14532d;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Variant 4: Cream / Warm Light Yellow Tint Input */
+.uedp-inputbox2--cream .uedp-inputbox2__pill {
+  background-color: #fefce8;
+  border: 1.5px solid #475569;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.uedp-inputbox2--cream .uedp-inputbox2__submit-btn {
+  background-color: #14532d;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
