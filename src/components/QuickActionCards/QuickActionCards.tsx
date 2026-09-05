@@ -33,10 +33,10 @@ export const QuickActionCards: React.FC<QuickActionCardsProps> = ({
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M5 4h7a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-            <path d="M19 7v2" strokeDasharray="1.5 1.5" />
-            <path d="M19 11v2" strokeDasharray="1.5 1.5" />
-            <path d="M19 15v2" strokeDasharray="1.5 1.5" />
+            {/* Left solid bracket */}
+            <path d="M9.5 5H7A2 2 0 0 0 5 7v10a2 2 0 0 0 2 2h2.5" />
+            {/* Right dashed bracket */}
+            <path d="M14.5 5H17a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2.5" strokeDasharray="3.2 2.2" />
           </svg>
         </span>
       )}
