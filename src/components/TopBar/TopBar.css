@@ -1,24 +1,89 @@
-/* Styles for Figma Component: "Top Bar" */
-.uedp-topbar {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "top bar" (node-id=35-2389) */
 
 .uedp-topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 24px;
-  background: var(--uedp-slate-900, #0f172a);
-  border-bottom: 1px solid var(--uedp-slate-800, #1e293b);
-  color: #f8fafc;
+  max-width: 460px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  background-color: #ffffff;
 }
-.uedp-topbar__brand {
-  font-weight: 700;
-  font-size: 18px;
+
+.uedp-topbar__btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 4px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  cursor: pointer;
+  color: #14532d;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  border-radius: 8px;
 }
+
+.uedp-topbar__btn:hover:not(:disabled) {
+  background-color: rgba(20, 83, 45, 0.06);
+  transform: scale(1.05);
+}
+
+.uedp-topbar__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 16px;
+}
+
+.uedp-topbar__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #14532d;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.uedp-topbar__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+/* Variant 1: Default (Clean White Top Bar) */
+.uedp-topbar--default {
+  background-color: #ffffff;
+}
+
+/* Variant 2: Disabled (Muted Slate Grey Top Bar) */
+.uedp-topbar--disabled {
+  background-color: #ffffff;
+}
+
+.uedp-topbar--disabled .uedp-topbar__btn,
+.uedp-topbar--disabled .uedp-topbar__title,
+.uedp-topbar--disabled .uedp-topbar__subtitle {
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Variant 3: Shadow / Elevated White Top Bar */
+.uedp-topbar--shadow {
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Variant 4: Cream / Warm Light Yellow Fill Bar */
+.uedp-topbar--cream {
+  background-color: #fefce8;
+}
+
