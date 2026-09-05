@@ -1,27 +1,78 @@
-/* Styles for Figma Component: "Checkbox" */
-.uedp-checkbox {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "checkbox" (node-id=35-2611) */
 
 .uedp-checkbox {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   user-select: none;
-  font-size: 14px;
-  color: var(--uedp-slate-200, #e2e8f0);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
 }
-.uedp-checkbox__box {
-  width: 20px;
-  height: 20px;
-  border-radius: var(--uedp-rounded, 4px);
-  border: 2px solid var(--uedp-blue-500, #3b82f6);
-  background: var(--uedp-blue-600, #2563eb);
+
+.uedp-checkbox:hover:not(.uedp-checkbox--disabled) {
+  transform: scale(1.06);
+}
+
+.uedp-checkbox__circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
 }
+
+/* Variant 1: Default (Unchecked Yellow Ring) */
+.uedp-checkbox--default .uedp-checkbox__circle {
+  border: 2.5px solid #facc15;
+  background-color: transparent;
+}
+
+/* Variant 2: Disabled (Slate Muted Checked) */
+.uedp-checkbox--disabled {
+  cursor: not-allowed;
+}
+
+.uedp-checkbox--disabled .uedp-checkbox__circle {
+  border: 1.5px solid #cbd5e1;
+  background-color: #f1f5f9;
+  color: #cbd5e1;
+}
+
+/* Variant 3: Checked (Solid Golden Yellow Fill) */
+.uedp-checkbox--checked .uedp-checkbox__circle {
+  background-color: #facc15;
+  border: 2.5px solid #facc15;
+  color: #ffffff;
+}
+
+/* Variant 4: Shadow (Elevated Unchecked Ring) */
+.uedp-checkbox--shadow .uedp-checkbox__circle {
+  border: 2.5px solid #facc15;
+  background-color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Variant 5: CheckedShadow (Elevated Checked Yellow Fill) */
+.uedp-checkbox--checkedShadow .uedp-checkbox__circle {
+  background-color: #facc15;
+  border: 2.5px solid #facc15;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(234, 179, 8, 0.38);
+}
+
+/* Variant 6: Cream (Warm Light Yellow Cream Fill) */
+.uedp-checkbox--cream .uedp-checkbox__circle {
+  background-color: #fefce8;
+  border: 2.5px solid #facc15;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
