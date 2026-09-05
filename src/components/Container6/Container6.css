@@ -1,16 +1,118 @@
-/* Styles for Figma Component: "Container 6" */
-.uedp-container6 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  box-sizing: border-box;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Styles for Figma Component: "container-6" (node-id=33-2189) */
 
 .uedp-container6 {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 360px;
-  background: var(--uedp-slate-900, #0f172a);
-  border: 1px solid var(--uedp-slate-800, #1e293b);
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  max-width: 440px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
 }
+
+.uedp-container6__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.uedp-container6__star-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #65d01e;
+}
+
+.uedp-container6__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #14532d;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.uedp-container6__metrics {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.uedp-container6__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.uedp-container6__label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.uedp-container6__label--saved {
+  color: #65d01e;
+}
+
+.uedp-container6__label--total {
+  color: #14532d;
+  font-weight: 700;
+}
+
+.uedp-container6__amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: #14532d;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.uedp-container6__comparison {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* Variant 1: Default (Soft Lime Green to Yellow Pastel Gradient) */
+.uedp-container6--default {
+  background: linear-gradient(135deg, #f0fdf4 0%, #fefce8 100%);
+}
+
+.uedp-container6--default:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Variant 2: Disabled (Soft Slate Grey Fill) */
+.uedp-container6--disabled {
+  background-color: #e2e8f0;
+}
+
+.uedp-container6--disabled .uedp-container6__star-icon,
+.uedp-container6--disabled .uedp-container6__label--saved {
+  color: #94a3b8;
+}
+
+.uedp-container6--disabled .uedp-container6__title,
+.uedp-container6--disabled .uedp-container6__label--total,
+.uedp-container6--disabled .uedp-container6__amount {
+  color: #475569;
+}
+
+.uedp-container6--disabled .uedp-container6__comparison {
+  color: #94a3b8;
+}
+
+/* Variant 3: Vibrant (Fresh Light Green Gradient Fill) */
+.uedp-container6--vibrant {
+  background: linear-gradient(135deg, #dcfce7 0%, #fef9c3 100%);
+}
+
+/* Variant 4: LimeYellow (Vibrant Yellow-Green Gradient Fill) */
+.uedp-container6--limeYellow {
+  background: linear-gradient(135deg, #d9f99d 0%, #fef08a 100%);
+}
+
