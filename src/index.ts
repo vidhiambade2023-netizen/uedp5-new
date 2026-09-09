@@ -3,8 +3,6 @@ export { Component336 } from './components/Component336/Component336';
 export type { Component336Props } from './components/Component336/Component336';
 export { Filters } from './components/Filters/Filters';
 export type { FiltersProps } from './components/Filters/Filters';
-export { Component315 } from './components/Component315/Component315';
-export type { Component315Props } from './components/Component315/Component315';
 export { DateFilters } from './components/DateFilters/DateFilters';
 export type { DateFiltersProps } from './components/DateFilters/DateFilters';
 export { Zones } from './components/Zones/Zones';
